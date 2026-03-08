@@ -1,0 +1,240 @@
+@import url(../base.css);
+@import url(../components.css);
+@import url(../layout.css);
+
+/* body {
+    padding: 50px 300px;
+    background-color: var(--main-color);
+} */
+
+@media (max-width: 1440px) {
+    body {
+        padding: 40px 30px;
+    }
+}
+
+.mainBlock {
+    border: var(--border-color) 1px solid;
+    border-radius: 30px;
+    display: grid;
+    gap: 50px;
+    padding: 175px 100px 100px 100px;
+    width: 80%;
+}
+
+.previewContainer{
+    margin-bottom: 40px;
+    display: flex;
+    padding: 50px 100px;
+    border: #c3c3c3 1px solid;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-radius: 0px 0px 20px 20px;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Планшет горизонтально */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .previewContainer{
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .previewContainer{
+        padding: 20px;
+        margin-top: 40px;
+        border-radius: 20px;
+    }
+}
+
+.mainBlockContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+@media (max-width: 1570px) {
+    .mainBlock {
+        padding: 175px 50px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .mainBlock {
+        padding: 100px 60px;
+    }
+}
+
+@media (max-width: 780px) {
+    .mainBlock{
+        padding: 50px 20px;
+    }
+}
+
+.nameAndButton {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.nameEmailContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (max-width: 700px) {
+    .nameAndButton {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        /* align-content: flex-start; */
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .download {
+        width: 100%;
+    }
+}
+
+.cvMap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width: 1262px) {
+    .cvMap {
+        display: none;
+    }
+}
+
+.cvMapTitles {
+    font-family: Inter;
+    color: var(--accent-color);
+    transition: color 0.15s ease-in;
+}
+
+.cvMapTitles:hover{
+    cursor: pointer;
+    color: var(--logo-color);
+}
+
+.aboutMeContainer{
+    width: 100%;
+}
+
+.abouMeText {
+    margin: 0px;
+    font-size: 24px;
+    width: 80%;
+}
+
+@media (max-width: 1262px) {
+    .abouMeText {
+        font-size: 20px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 780px) {
+    .abouMeText{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .aboutMeContainer{
+        width: 100%;
+    }
+}
+
+.table {
+    display: grid;
+    gap: 20px;
+}
+
+.row {
+    border-radius: 5px;
+    /* border: #e0e0e0 1px solid; */
+    padding: 5px;
+    background-color: #f6f6f6;
+    display: flex;
+    gap: 100px;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Inter';
+}
+
+@media (max-width: 870px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+.langContainer {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    justify-items: start;
+    justify-content: start;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+/* Телефон */
+@media (max-width: 767px) {
+    .langContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.comContainer {
+    display: flex;
+    gap: 80px;
+    justify-items: start;
+    font-size: 20px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 870px) {
+    .comContainer {
+        display: grid;
+        gap: 20px;
+        justify-items: start;
+        font-size: 20px;
+        grid-template-columns: 1fr 1fr;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
+
+.previewImages{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 40px 0px 0px 0px;
+}
+
+@media (max-width: 780px) {
+    .previewImages{
+        display: none;
+    }
+}

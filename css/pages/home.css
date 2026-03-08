@@ -1,0 +1,67 @@
+@import url(../base.css);
+@import url(../components.css);
+@import url(../layout.css);
+
+a{
+  color: var(--border-color);
+  transition: text-decoration 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+
+a:hover{
+  text-decoration: wavy;
+  color: #F6B926;
+}
+
+.screenshotImg{
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 1s ease-out, width 1s ease-out, box-shadow 0.15s ease-out;
+    transform-style: preserve-3d;
+}
+
+@media (max-width: 768px) {
+    .screenshotImg{
+        border-radius: 10px;
+    }
+}
+
+.screenshotImg:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, 
+                rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+/* при узком экране включаем горизонтальный скролл */
+@media (max-width: 1000px) {
+  .projectsContainer {
+    overflow-x: auto;                 /* горизонтальный скролл */
+    -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
+    scroll-snap-type: x mandatory;     /* (опционально) для плавного прилипания карточек */
+  }
+
+  .projectWindow {
+    flex: 0 0 80%;        /* карточки не сжимаются, занимают 80% ширины */
+    scroll-snap-align: start; /* (если используешь scroll-snap-type) */
+  }
+}
+
+.cardAndTextContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: flex-start;
+}
+
+.bussinesCardContainer > .text, .businessCard{
+  width: 60%;
+}
+
+@media (max-width: 768px) {
+    .bussinesCardContainer > .text{
+        width: 100%;
+    }
+}
+
+/* адаптив под мобилку */

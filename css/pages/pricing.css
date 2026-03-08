@@ -1,0 +1,40 @@
+@import url(../base.css);
+@import url(../layout.css);
+@import url(../components.css);
+
+ul > li > .listIco{
+    width: fit-content;
+    font-size: 16px;
+}
+
+.card > .liquidBtnBlack{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.cardContainer > p{
+    white-space: nowrap;
+}
+
+.cardTextContainer > .subtitleLogo {
+    font-weight: 600;
+}
+
+.cardTextContainer > .text{
+    font-size: 18px;
+}
+
+/* при узком экране включаем горизонтальный скролл */
+@media (max-width: 1000px) {
+  .cardContainer {
+    overflow-x: auto;                 /* горизонтальный скролл */
+    -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
+    justify-content: unset;
+    scroll-snap-type: x mandatory;     /* (опционально) для плавного прилипания карточек */
+  }
+
+  .card {
+    flex: 50% 0 0;        /* карточки не сжимаются, занимают 80% ширины */
+    scroll-snap-align: start; /* (если используешь scroll-snap-type) */
+  }
+}

@@ -1,0 +1,30 @@
+@import url(../base.css);
+@import url(../components.css);
+@import url(../layout.css);
+
+.projectInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projectDetails{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 100px;
+}
+
+#previewContainerPortfolio{
+    margin-top: 40px;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+/* Телефон */
+@media (max-width: 767px) {
+    #previewContainerPortfolio{
+        gap: 20px;
+        padding: 20px;
+    }
+}
