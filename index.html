@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="./img/welcome.ico" type="image/x-icon" />
+    <title>Welcome!</title>
+</head>
+<body>
+    <div class="mainContainer">
+        <nav>
+            <div class="logoContainer">
+                <p class="logo">Shary Vladyslav</p>
+                <p class="subtitleLogo">web-designer</p>
+            </div>
+
+            <button class="liquidBtn" onclick="location.href='about.html'">About me</button>
+        </nav>
+
+        <div class="smalText">
+            <p>
+                I create functional digital experiences with clarity and purpose. <br>
+                Clean design, balance, and structure define my work.
+            </p>
+        </div>
+
+        <!-- Блок кнопок -->
+        <div class="homeButtonsContainer">
+            <button class="smalButton" id="smalHomeBtnAbout" onclick="location.href='about.html'">About me</button>
+            <button class="smalButton" id="smalHomeBtnPrice" onclick="location.href='pricing.html'" >Price</button>
+            <button class="smalButton" id="smalHomeBtnPresentation" onclick="location.href='presentation.html'">Presentation</button>
+        </div>
+
+        <div class="screenshotContainer" onclick="location.href='presentation.html'">
+            <img class="screenshotImg" src="./img/screenshot.png" alt="">
+        </div>
+
+        <!-- About me -->
+        <div class="containers">
+            <div class="textTitle">About me</div>
+
+            <div class="bussinesCardContainer">
+                <div class="effektContainer">
+                    <img class="businessCard" src="./img/newBusinessCard.png" alt="">
+                </div>
+                
+                <p class="text">
+                        I discovered my passion for design at the age of 14, 
+                        and since then I’ve been fascinated by creating digital 
+                        experiences that are both visually appealing and user-friendly. 
+                        What started as curiosity gradually grew into a deeper interest 
+                        in how thoughtful design can simplify interactions and improve 
+                        usability. <br><br>
+
+                        Over time, I’ve developed skills in modern design tools 
+                        such as Figma, Adobe XD, Photoshop, Canva, and Affinity. 
+                        My work focuses on UX structure, wireframing, and clean 
+                        UI design, with a strong emphasis on clarity, usability, 
+                        and well-organized interfaces. <br><br>
+
+                        I’ve also designed websites for charitable organizations, 
+                        an experience that taught me how to combine aesthetics with 
+                        purpose and create designs that support meaningful initiatives. 
+                        <br><br>
+                </p>
+            </div>
+        </div>
+
+        <!-- My web-design portfolio -->
+        <div class="containers">
+            <div class="textTitle">My web-design portfolio</div>
+
+            <div class="projectsContainer">
+                <!-- окно 1 -->
+                <div class="projectWindow">
+                    <div class="content" onclick="location.href='bank.html'">
+                        <img class="imgContent" src="./img/Banking].png" alt="">
+                    </div>
+                </div>
+
+                <!-- окно 2 -->
+                <div class="projectWindow">
+                    <div class="content" onclick="location.href='coffeeNap.html'">
+                        <img class="imgContent" src="./img/CNPreview 1.png" alt="">
+                    </div>
+                </div>
+
+                <!-- окно 3 -->
+                <div class="projectWindow">
+                    <div class="content" onclick="location.href='yourBacker.html'">
+                        <img class="imgContent" src="./img/Travel.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="mainFooterContentContainer">
+                <div class="titleLogo">
+                    <p class="logo">Shary Vladyslav</p>
+                    <p class="subtitleLogo">web-designer</p>
+                </div>
+
+                <div class="footerButtons">
+                    <button class="liquidBtnBlack" onclick="location.href='about.html'">About me</button>
+                    <button class="liquidBtnBlack" id="download-btn"> Download CV as PDF
+                        <img class="downloadIco" src="./img/tabler_download.png" alt="download icon">
+                    </button>
+                </div>
+            </div>
+
+            <div class="dockumentationContainer">
+                <p class="dockumentation">The site was developed in 71 days</p>
+                <div class="socialMediaContainer">
+                    <a class="dockumentation" href="https://unsplash.com/@vlado_" target="_blank" rel="noopener noreferrer"">Unsplash</a>
+                    <a class="dockumentation" href="https://dribbble.com/UIUniverse" target="_blank" rel="noopener noreferrer"">Dribbble</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/script.js"></script>
+</html>
