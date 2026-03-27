@@ -412,12 +412,27 @@ li{
     border-radius: 15px;
     transition: background-color ease 0.3s,
                 color ease 0.3s;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.smalButton > .svgLogo {
+  width: 16px;
+  height: 16px;
+  display: block;
+  flex-shrink: 0;
+  transition: fill ease 0.3s;
 }
 
 .smalButton:hover{
     background-color: #000;
     color: var(--clickTextBtn-color);
     cursor: pointer;
+    fill: var(--main-color);
 }
 
 /* ======= Price Card ======== */
