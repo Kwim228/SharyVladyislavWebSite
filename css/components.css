@@ -549,6 +549,521 @@ li{
 svg{
     width: 1em;
     height: 1em;
+}  }
+}
+
+/* жидкий */
+.liquidBtn::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -40%;
+    width: 180%;
+    height: 300%;
+    background: radial-gradient(
+        circle,
+        rgba(255,255,255,0.9) 0%,
+        rgba(255,255,255,0.3) 40%,
+        rgba(255,255,255,0) 70%
+    );
+    transform: translate(-50%, -50%) rotate(25deg);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.6s ease;
+}
+
+/* hover эффект */
+.liquidBtn:hover {
+    transform: scale(1.04);
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+}
+
+.liquidBtn:hover::before {
+    opacity: 1;
+    transform: translate(20%, 20%) rotate(25deg);
+}
+
+/* =================== */
+/* LIQUID BUTTON BLACK */
+/* =================== */
+.liquidBtnBlack {
+    display: flex;
+    gap: 10px;
+    font-family: Inter;
+    font-size: 20px;
+    background-color: var(--mainTxtBtn-color);
+    color: var(--clickTextBtn-color);
+    padding: 10px 20px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* align-content: center; */
+    justify-content: center;
+    position: relative;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.08); /* лёгкая светлая граница */
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    overflow: hidden;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    white-space: nowrap;
+}
+
+/* яркий жидкий блик */
+.liquidBtnBlack::before {
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: -40%;
+    width: 200%;
+    height: 300%;
+    background: radial-gradient(
+        circle,
+        rgba(255,255,255,0.8) 0%,
+        rgba(255, 255, 255, 0) 35%,
+        rgba(255,255,255,0) 70%
+    );
+    transform: translate(-50%, -50%) rotate(25deg);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.6s ease;
+}
+
+/* Hover */
+.liquidBtnBlack:hover {
+    transform: scale(1.05);
+    background: rgb(0, 0, 0);
+    box-shadow: 0 6px 30px rgba(0,0,0,0.35), 0 0 6px rgba(255,255,255,0.15);
+}
+
+.liquidBtnBlack:hover::before {
+    opacity: 1;
+    transform: translate(25%, 25%) rotate(25deg);
+}
+
+@media (max-width: 768px) {
+  .liquidBtnBlack{
+    width: 100%;
+  }
+
+  .btnContainer > .liquidBtn{
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+    .buttonsContainer > #liquidBtnPresentation{
+        display: none;
+    }
+
+    .buttonsContainer{
+        margin: 0px;
+    }
+}
+
+/* =================== */
+/* Окно как в MacOs */
+/* =================== */
+/* Базовое окно */
+.windows{
+    width: 90%;
+    max-width: 1550px;
+    margin: auto;
+    position: relative;
+    min-height: 620px;
+    display: block;
+}
+
+.window {
+    background: white;
+    border-radius: 12px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    border: var(--border-color) 1px solid; 
+    transition: box-shadow 0.15s ease-in;
+}
+
+.window:hover{
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+.windowsContainer{
+    display: flex;
+}
+
+.small { 
+    width: 50%;
+    height: 80%;
+    left: 100%;
+    top: 30%;
+    transform: translate(-150%, -30%);
+}
+.medium { 
+    width: 40%;
+    height: 70%;
+    left: 65%;
+    top: 65%;
+    transform: translate(-50%, -60%);
+}
+.large { 
+    width: 30%;
+    height: 50%;
+    left: 30%;
+    top: 60%;
+    transform: translate(20%, -20%);
+}
+
+
+/* Title bar */
+.title-bar {
+    height: 32px;
+    background: #f5f5f7;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    cursor: grab;
+    padding: 0 10px;
+    user-select: none;
+}
+
+/* Кнопки */
+.buttons {
+    display: flex;
+    gap: 6px;
+    margin-right: 10px;
+}
+
+.buttons span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.close { 
+    background: #ff605c; 
+    cursor: pointer; 
+}
+.min { 
+    background: #ffbd44; 
+}
+.max { 
+    background: #00ca4e; 
+}
+
+/* Title text */
+.windowTitle {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+    pointer-events: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.imgContent{
+    width: 100%;
+    height: 100%;
+}
+
+.cvButtons{
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+}
+
+.projectsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 25px;
+}
+
+.projectWindow{
+    cursor: pointer;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: visible; /* по умолчанию без скролла */
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    transition: box-shadow 0.15s ease-in;
+}
+
+.projectWindow:hover{
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+/* при узком экране включаем горизонтальный скролл */
+@media (max-width: 1000px) {
+  .projectsContainer {
+    overflow-x: auto;                 /* горизонтальный скролл */
+    -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
+    scroll-snap-type: x mandatory;     /* (опционально) для плавного прилипания карточек */
+  }
+
+  .projectWindow {
+    flex: 0 0 80%;        /* карточки не сжимаются, занимают 80% ширины */
+    scroll-snap-align: start; /* (если используешь scroll-snap-type) */
+  }
+}
+
+.projectTitle-bar{
+    height: 32px;
+    background: #f5f5f7;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    user-select: none;
+}
+
+.contentCV {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.emailContainer{
+    color: var(--accent-color);
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 0px;
+    margin: 0px;
+    transition: color 0.15s ease-in;
+}
+
+.emailContainer:hover{
+    color: var(--logo-color);
+    cursor: pointer;
+}
+
+.email{
+    margin: 10px 0px 0px 0px;
+}
+
+.footerButtons{
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .footerButtons{
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.downloadIco{
+    width: 24px;
+    height: 24px;
+}
+
+a{
+    color: var(--logo-color);
+    text-decoration: none;
+}
+
+/* images */
+.backgroundImg{
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.personalImg{
+    width: 10%;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .personalImg{
+        width: 15%;
+    }
+}
+
+@media (max-width: 768px) {
+  .personalImg{
+    width: 40%;
+  }
+}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+    font-family: Inter;
+    font-size: var(--font-size-text);
+    width: fit-content;
+}
+
+li{
+    gap: 10px;
+    text-decoration: none;
+    width: fit-content;
+    list-style: none;
+}
+.presentationIco{
+    width: 32px;
+    height: 32px;
+}
+
+.smalButton{
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    color: var(--mainTxtBtn-color);
+    padding: 10px 20px;
+    font-family: Inter;
+    font-size: 16px;
+    border-radius: 15px;
+    transition: background-color ease 0.3s,
+                color ease 0.3s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+#btnLink{
+    text-decoration: none;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--logo-color);
+    transition: color 0.2s ease-in;
+}
+
+#btnLink:hover{
+    color: var(--clickTextBtn-color);
+}
+
+.smalButton:hover{
+    background-color: #000;
+    color: var(--clickTextBtn-color);
+    cursor: pointer;
+}
+
+/* ======= Price Card ======== */
+.card{
+    background-color: var(--main-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 20%;
+    height: fit-content;
+    transition: box-shadow ease 0.3s;
+    flex: 30% 0 0;        /* карточки не сжимаются, занимают 80% ширины */
+    scroll-snap-align: start;
+}
+
+.card:hover{
+    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 1500px) {
+    .card{
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card{
+        width: fit-content;
+    }
+}
+
+/* ======= FAQ ======== */
+.questionBox{
+    background-color: var(--main-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 20px;
+    transition: box-shadow ease 0.3s;
+}
+
+.questionBox:hover{
+    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+}
+
+/* убрал стрелку */
+.faq-question {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Анимация раскрытия */
+.faq-answer {
+  margin-top: 10px;
+  line-height: 1.6;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.faq-question > img{
+    width: 24px;
+    height: 24px;
+}
+
+.faq-question > img::after{
+    transform: rotate(90deg);
+}
+
+.questionBox > img{
+    width: 24px;
+    height: 24px;
+    rotate: 90deg;
+}
+
+/* About me Card */
+.businessCard {
+  cursor: pointer;
+  width: 100%;
+  border: var(--border-color) 1px solid;
+  border-radius: 20px;
+  background: white;
+  transition: transform 0.6s ease-out, box-shadow 0.25s ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+  overflow: hidden;
+}
+
+.businessCard:hover {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .businessCard{
+        width: 100%;
+    }
+}
+
+svg{
+    width: 1em;
+    height: 1em;
     
 }  }
 }
