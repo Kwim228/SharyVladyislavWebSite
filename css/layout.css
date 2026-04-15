@@ -71,6 +71,181 @@ html {
     flex-direction: column;
 }
 
+.btnContainer{
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+  .btnContainer{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
+
+.mainContainer > .containers{
+    margin-bottom: 40px;
+}
+
+.parameterContainer{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: var(--main-color);
+    border: var(--border-color) 1px solid;
+    padding: 20px;
+    gap: 10px;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+  .footer{
+    gap: 20px;
+  }
+}
+
+.mainFooterContentContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+  .mainFooterContentContainer{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+.dockumentationContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.socialMediaContainer{
+    display: flex;
+    gap: 10px;
+    transition: color 0.3s ease-in;
+}
+
+.socialMediaContainer > .dockumentation:hover{
+    color: var(--logo-color);
+}
+
+.homeButtonsContainer{
+    margin-bottom: 50px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    #smalHomeBtnAbout{
+        display: none;
+    }
+
+    #smalHomeBtnPrice{
+        width: 100%;
+        padding: 15px 0px;
+    }
+
+    #smalHomeBtnPresentation{
+        display: none;
+    }
+}
+
+.cardContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    margin: 50px 0px;
+    justify-content: center;
+    overflow-x: auto;                 /* горизонтальный скролл */
+    -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
+    justify-content: unset;
+    scroll-snap-type: x mandatory;
+}
+
+@media (max-width: 768px) {
+    .cardContainer{
+        flex-direction: column;
+    }
+}
+
+.cardTextContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faqContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0px;
+}    }
+}
+
+.screenshotContainer{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    perspective: 15000px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.logoContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+@media (max-width: 768px) {
+    .logoContainer{
+        white-space: nowrap;
+    }
+}
+
+.buttonsContainer{
+    display: flex;
+    gap: 10px;
+}
+
+.containers{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
 /* Контейнер для карточки */
 .bussinesCardContainer {
   display: flex;
