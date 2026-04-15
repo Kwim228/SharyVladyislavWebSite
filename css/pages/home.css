@@ -10,7 +10,6 @@ a{
 
 a:hover{
   text-decoration: wavy;
-  color: #F6B926;
 }
 
 .screenshotImg{
@@ -45,21 +44,25 @@ a:hover{
   }
 }
 
-.cardAndTextContainer{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    flex-wrap: nowrap;
-    align-content: center;
-    align-items: flex-start;
+.AboutMeContent{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
-.bussinesCardContainer > .text, .businessCard{
-  width: 60%;
+.AboutMeContent > .text{
+  text-align: center;
+  max-width: 750px;
 }
 
-@media (max-width: 768px) {
-    .bussinesCardContainer > .text{
-        width: 100%;
-    }
+.MyFace{
+  width: 100px;
+  height: 100px;
+}
+
+.portfolioLogo{
+  width: 24px;
 }
